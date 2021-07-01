@@ -1,6 +1,6 @@
 ## Odin project homepage
 
-This project the second part  of the final assigment from [The odin project HTML and CSS course](https://www.theodinproject.com/paths/full-stack-ruby-on-rails/courses/html-and-css/lessons/design-your-own-grid-based-framework).
+This project is the second part  of the final assigment from [The odin project HTML and CSS course](https://www.theodinproject.com/paths/full-stack-ruby-on-rails/courses/html-and-css/lessons/design-your-own-grid-based-framework).
 
 It's a recreation of [The Odin Project](https://www.theodinproject.com/) homepage.
 

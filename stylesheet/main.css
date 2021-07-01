@@ -42,8 +42,10 @@ a.btn {
 a.btn:hover { text-shadow: none; }
 
 a.btn.blue { background-color: var(--blue-greenish);}
-a.btn.blue:hover { opacity: .8; }
 a.btn.yellow { background-color: var(--main-yellow);}
+
+a.btn.blue:hover,
+a.btn.yellow:hover { opacity: .8; }
 
 #courses-section .btn { padding: 0 3em;}
 
