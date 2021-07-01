@@ -1,0 +1,306 @@
+/* GENERAL */
+
+@font-face {
+  font-family: 'pr-viking';
+  src: url('../pr_viking/PR\ Viking.ttf');
+}
+
+:root {
+  --main-yellow: rgb(210, 145, 0);
+  --grey-content: hsl(0, 0%, 50%);
+  --grey-headers: hsl(0, 0%, 25%);
+  --blue-greenish:  hsl(180, 100%, 37.5%);
+  --roboto-font: 'Roboto', sans-serif
+}
+
+body { font-family: var(--roboto-font); }
+
+a:hover:not(.btn) { color: black !important; }
+
+.background-divider {
+  background-color: hsl(0, 0%, 95%)
+}
+
+/* LINKS */
+
+.link {
+  font-size: .75em;
+  text-decoration: underline;
+}
+.link:hover { text-decoration: none; }
+
+#success-stories-section .link { font-size: 1em;}
+
+/* BUTTONS */
+
+a.btn {
+  color: white;
+  text-transform: capitalize;
+  border: none;
+}
+
+a.btn:hover { text-shadow: none; }
+
+a.btn.blue { background-color: var(--blue-greenish);}
+a.btn.blue:hover { opacity: .8; }
+a.btn.yellow { background-color: var(--main-yellow);}
+
+#courses-section .btn { padding: 0 3em;}
+
+#balloon-btn {
+  display: none;
+  opacity: .8;
+}
+
+#balloon-btn i { 
+  font-size: 1.75em;
+}
+@media (min-width: 480px) {
+  #balloon-btn { 
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+    display: inline-block;
+  }
+}
+/* TEXT STYLING */
+
+.content-container {
+  font-family: var(--roboto-font);
+  color: var(--grey-content);
+}
+
+.title { color: var(--grey-headers); }
+
+/* SYLING FOR THE LOGO */
+
+.logo { height: 75px; }
+.logo-title {
+  font-family: 'pr-viking';
+  color: var(--main-yellow);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, .2);
+}
+
+@media (max-width: 1020px) {
+  .logo { height: 60px; }
+  .logo-title {font-size: 1.5em;}
+}
+/* TOP MAIN NAVBAR OF THE PAGE */
+
+.icon-wrapper {display: none;}
+.icon-wrapper a {
+  font-size: 1.25em;
+  color: var(--blue-greenish);
+}
+
+#nav-user { position: relative;}
+#nav-user::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+  content: '';
+  display: block;
+  width: 2px;
+  height: 55%;
+  background: var(--grey-content);
+}
+
+#main-navbar .navigation a {
+  color: var(--grey-content);
+}
+
+@media (max-width: 760px) {
+  #main-navbar { 
+    position: fixed;
+    top: 0;
+    width: 100%;
+    justify-content: space-between;
+    background-color: white;
+    
+  }
+  .nav-links {display: none;}
+  .icon-wrapper {display: block;}
+}
+
+@media (max-width: 1020px) {
+  #main-navbar { padding: 0 2em; }
+  .navigation a { padding: .5em}
+}
+
+/* FOOTER NAVBAR */
+
+#main-footer .logo-wrapper { display: none;}
+
+.socials a{
+  font-size: 1.5em;
+  color: var(--main-yellow);
+}
+
+.about {display: none;}
+.about a { color: var(--grey-content); }
+
+@media (min-width: 480px) {
+  .about { display: flex;}
+}
+@media (min-width: 760px) {
+  #main-footer .logo-wrapper { display: flex;}
+}
+@media (min-width: 1020px) {
+  .socials .navigation { gap: 2em; }
+}
+
+/* HEADER */
+
+#main-header h1,
+#header-subtitle > a {
+  color: var(--main-yellow);
+}
+
+#main-header h1 {
+  font-size: 2.25em;
+  font-weight: 300;
+}
+
+#header-subtitle { font-size: 1.25em; }
+#header-subtitle > a {font-size: .85em;}
+
+@media (max-width: 760px) {
+  #main-header { margin-top: calc(84px + 2em);}
+}
+@media (min-width: 480px) {
+  #main-header h1 {
+    margin: 0 1em;
+  }
+}
+@media (min-width: 760px) {
+  #main-header h1 {
+    margin: 1.75em 2.5em;
+  }
+}
+
+@media (max-width: 1020px) {
+  #main-header { text-align: center;}
+  #header-subtitle { padding: 0; font-size: 1.15em;}
+  #main-header .btn { margin: 3.5em;}
+}
+
+/* HOW IT WORK SECTION */
+
+#how-it-work-header p {
+  padding-left: .75em;
+  padding-right: .75em;
+  font-size: 1.25em;
+ }
+
+#concepts article {padding: 1.5em;}
+#concepts article { 
+  min-width: 350px;
+}
+#concepts p { font-size: 1.25em;}
+#learn-img,
+#build-img,
+#connect-img { height: 100px;}
+
+
+@media (min-width: 760px) {
+  #how-it-work-header p { padding: 1em 2em;}
+  
+  #concepts article { padding: 1.5em 4.5em; }
+  #learn-img,
+  #build-img,
+  #connect-img { height: 125px;}
+  
+}
+
+@media (min-width: 1020px) {
+  #how-it-work-header {max-width: 700px;}
+  #concepts {
+    flex-direction: row;
+    max-width: 1050px;
+  }
+  #concepts article { padding: 1.25em; }
+  #learn-img,
+  #build-img,
+  #connect-img { height: 155px;}
+}
+
+/* COURSES SECTION */
+
+#courses-section h2.title { padding: 0 1.5em;}
+
+.courses-wrapper {
+  max-width: 775px;
+}
+
+.courses-wrapper article {
+  min-width: 200px;
+  flex: 0 1 calc(33.3333% - 1.5em);
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, .1);
+  background-color: white;
+}
+
+.courses-wrapper .title {
+  font-size: 18px;
+}
+
+#courses-section .media-container {
+  width: 140px;
+  height: 140px;
+}
+
+@media (min-width: 760px) {
+  #courses-section  h2.title { padding: 0 2em;}
+  .courses-wrapper { padding: 0 4em;}
+}
+
+@media (min-width: 1020px) {
+  .courses-wrapper { padding: 0; }
+}
+
+/* SUCCESS STORIES SECTION */
+
+#success-stories-section {
+  background-image: linear-gradient(white, hsl(0, 0%, 95%));
+}
+
+.story .title a {
+  font-weight: normal;
+  font-size: .75em;
+  color: var(--main-yellow);
+}
+
+.story .media-container { display: none;}
+.story .content-container {
+  padding: 0;
+  margin: 0;
+  font-size: 18px;
+}
+
+#sign-up-banner .title {
+  font-size: 1.75em;
+  font-weight: 300;
+  color: var(--grey-content);
+}
+
+#sign-up-banner .btn { padding: 1.25em 3.5em; }
+
+@media (min-width: 480px) {
+  .story .media-container { display: block;}
+  #sign-up-banner h2 { font-size: 2.5em;}
+}
+@media (min-width: 760px) {
+  .stories-wrapper { padding: 0 2.5em; }
+}
+@media (min-width: 1020px) {
+  .stories-wrapper {
+    padding: 0;
+    margin: 0 1em;
+  }
+  .story {
+    grid-column: span 6;
+    padding:0;
+  }
+}
+
+
